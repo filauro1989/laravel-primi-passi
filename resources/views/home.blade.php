@@ -7,13 +7,29 @@
     <title>Document</title>
 </head>
 <body>
+
+    <header>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="{{ route('contacts') }}">Contatti</a>
+                </li>
+                <li>
+                    <a href="{{ route('info') }}">Info</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
     <h1>Home Page</h1>
     <h2>Benvenuto {{ $name }} {{ $lastname }}</h2>
     <h2>{{ $name }} ha {{ $age }} anni</h2>
-    <h2>{{ $name }} pratica 
-        @foreach ($sport as $sport)
-            {{$sport}}
-        @endforeach
-    </h2>
+    @if (isset($sport))
+        <h2>{{ $name }} pratica 
+            @foreach ($sport as $sport)
+                {{$sport}}
+            @endforeach
+        </h2>
+    @endif
 </body>
 </html>

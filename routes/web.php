@@ -14,6 +14,13 @@ use Symfony\Component\VarDumper\Cloner\Data;
 |
 */
 
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
+Route::get('/info', function () {
+    return view('info');
+})->name('info');
+
 Route::get('/', function () {
 
     $data = [
