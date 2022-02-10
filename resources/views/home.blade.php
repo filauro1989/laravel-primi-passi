@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    Hello World
+    <h1>Home Page</h1>
+    <h2>Benvenuto {{ $name }} {{ $lastname }}</h2>
+    <h2>{{ $name }} ha {{ $age }} anni</h2>
+    <h2>{{ $name }} pratica 
+        @foreach ($sport as $sport)
+            {{$sport}}
+        @endforeach
+    </h2>
 </body>
 </html>
